@@ -1,6 +1,6 @@
 # Abdulazeez Jimoh Porfolio
 
-__Website made with Dimension by [HTML5 UP](https://html5up.net/) | [@ajlkn](https://ajlkn.io)__
+__Website made with Dimension by [HTML5 UP](https://html5up.net/) | [@ajlkn](http://twitter.com/ajlkn)__
 
 ----
 
