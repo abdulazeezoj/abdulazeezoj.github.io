@@ -1,0 +1,21 @@
+{
+  "name": "abdulazeezoj.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/assets/css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulazeezoj/abdulazeezoj.github.io.git"
+  },
+  "keywords": [],
+  "author": "Abdulazeez Jimoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulazeezoj/abdulazeezoj.github.io/issues"
+  },
+  "homepage": "https://abdulazeezoj.github.io"
+}
