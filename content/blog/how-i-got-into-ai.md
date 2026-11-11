@@ -20,7 +20,7 @@ Those projects were public work. People could read the code, run the demo and se
 - **Pick a problem, not a technology.** "Find pylons in satellite images" teaches data collection, labelling, training, evaluation and deployment. "Learn deep learning" teaches vocabulary.
 - **Ship the whole thing.** A model in a notebook isn't a product. Wrapping it in an API, deploying it and watching it be used is where the real lessons are.
 - **Work in public.** Code and write-ups are a portfolio that keeps working while you sleep.
-- **Keep studying alongside.** I've been finishing a computer science degree at Ahmadu Bello University while working, and the fundamentals pay off constantly: data structures, databases and networks show up in every AI system.
+- **Keep studying alongside.** I studied computer science at Ahmadu Bello University while working, and the fundamentals pay off constantly: data structures, databases and networks show up in every AI system.
 
 ## What I'm still learning
 
