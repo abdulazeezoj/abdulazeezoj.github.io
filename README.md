@@ -25,7 +25,8 @@ kind: public            # public (code on GitHub) or case-study (private work)
 tags: [AI, Web]
 stack: [Python, React]
 role: Author
-featured: true          # show on the home page
+featured: true          # list under "Selected projects" on the home page
+spotlight: true          # optional: the one large "Featured project" card (use on a single project)
 repo: https://github.com/you/repo   # optional
 demo: https://example.com           # optional
 draft: false            # true hides it from the production build

@@ -13,13 +13,15 @@ import { z } from "zod";
 const projectSchema = z.object({
   title: z.string(),
   summary: z.string(),
-  year: z.number().int(),
+  year: z.number().int().optional(),
   /** "public" = code is open on GitHub; "case-study" = private/client work, write-up only */
   kind: z.enum(["public", "case-study"]),
   tags: z.array(z.string()).default([]),
   stack: z.array(z.string()).default([]),
   role: z.string().optional(),
   featured: z.boolean().default(false),
+  /** shown as the large "Featured project" card on the home page; use on one project */
+  spotlight: z.boolean().default(false),
   repo: z.url().optional(),
   demo: z.url().optional(),
   draft: z.boolean().default(false),
@@ -83,7 +85,7 @@ export function getProjects(): ProjectMeta[] {
       slug: slugOf(path),
     }))
     .filter((p) => !(isProd && p.draft))
-    .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title));
 }
 
 export function getPosts(): PostMeta[] {

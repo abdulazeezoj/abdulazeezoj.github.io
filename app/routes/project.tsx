@@ -38,8 +38,12 @@ export default function Project({ loaderData }: Route.ComponentProps) {
       <p className="text-muted-foreground mt-3 text-lg">{meta.summary}</p>
 
       <dl className="mt-6 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm">
-        <dt className="text-muted-foreground">Year</dt>
-        <dd>{meta.year}</dd>
+        {meta.year && (
+          <>
+            <dt className="text-muted-foreground">Year</dt>
+            <dd>{meta.year}</dd>
+          </>
+        )}
         {meta.role && (
           <>
             <dt className="text-muted-foreground">Role</dt>

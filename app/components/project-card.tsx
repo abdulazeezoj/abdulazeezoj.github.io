@@ -14,9 +14,11 @@ export function ProjectCard({ project }: { project: ProjectMeta }) {
           {project.title}
           <ArrowUpRight className="text-muted-foreground group-hover:text-brand ml-1 inline size-4 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </h3>
-        <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
-          {project.year}
-        </span>
+        {project.year && (
+          <span className="text-muted-foreground shrink-0 text-sm tabular-nums">
+            {project.year}
+          </span>
+        )}
       </div>
       <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
         {project.summary}

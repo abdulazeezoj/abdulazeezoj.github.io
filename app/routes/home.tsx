@@ -1,6 +1,7 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { Link } from "react-router";
 import { PostCard } from "~/components/post-card";
+import { FeaturedProject } from "~/components/featured-project";
 import { ProjectCard } from "~/components/project-card";
 import { GithubIcon } from "~/components/github-icon";
 import { Button } from "~/components/ui/button";
@@ -10,7 +11,10 @@ import type { Route } from "./+types/home";
 
 export function loader() {
   return {
-    projects: getProjects().filter((p) => p.featured).slice(0, 5),
+    spotlight: getProjects().find((p) => p.spotlight) ?? null,
+    projects: getProjects()
+      .filter((p) => p.featured && !p.spotlight)
+      .slice(0, 5),
     posts: getPosts().slice(0, 3),
   };
 }
@@ -18,7 +22,7 @@ export function loader() {
 export const meta: Route.MetaFunction = () => [{ title: site.title }];
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  const { projects, posts } = loaderData;
+  const { spotlight, projects, posts } = loaderData;
   return (
     <>
       <section aria-labelledby="intro">
@@ -52,6 +56,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           </Button>
         </div>
       </section>
+
+      {spotlight && <FeaturedProject project={spotlight} />}
 
       <section className="mt-20" aria-labelledby="featured">
         <div className="flex items-baseline justify-between">
