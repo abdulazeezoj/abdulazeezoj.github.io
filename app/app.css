@@ -142,3 +142,107 @@ code[data-theme*=" "] span {
 .dark code[data-theme*=" "] span {
   color: var(--shiki-dark);
 }
+
+/* Résumé (About page). The same markup is printed to PDF at build time. */
+.resume {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+.resume-header {
+  text-align: center;
+}
+.resume-header h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+.resume-header .headline {
+  margin-top: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.resume-header .contact {
+  margin-top: 0.35rem;
+  font-size: 0.9em;
+}
+.resume a {
+  text-underline-offset: 3px;
+}
+.resume-body h2 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.15em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.15rem;
+}
+.resume-body p {
+  margin-top: 0.35rem;
+}
+.resume-body h3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.resume-body h3 .when {
+  flex-shrink: 0;
+}
+.resume-body h3 + p {
+  margin-top: 0;
+  font-style: italic;
+}
+.resume-body ul {
+  margin-top: 0.25rem;
+  list-style: disc;
+  padding-left: 1.3rem;
+}
+.resume-body li {
+  margin-top: 0.15rem;
+}
+@media (max-width: 520px) {
+  .resume-body h3 {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@page {
+  size: Letter;
+  margin: 0.5in 0.6in;
+}
+@media print {
+  :root,
+  .dark {
+    --background: #fff;
+    --foreground: #000;
+    --muted-foreground: #333;
+    --border: #999;
+    --brand: #000;
+  }
+  html {
+    font-size: 10pt;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .resume {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .resume-body h2 {
+    margin-top: 0.9rem;
+  }
+  .resume-body h3 {
+    margin-top: 0.55rem;
+  }
+}

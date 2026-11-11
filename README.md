@@ -41,6 +41,14 @@ Create `content/blog/<slug>.md` with `title`, `summary`, `date` (YYYY-MM-DD), `t
 
 Always quote `title` and `summary` if they contain a colon. A bad or missing field fails the build with the file name.
 
+## Edit the About page / résumé
+
+The About page is `content/resume.md`. Contact details live in its frontmatter; the body is normal markdown. A heading written as `### Company | Place ::: Mar 2026 – Present` shows the dates right-aligned.
+
+`npm run build` also prints that page to `build/client/Abdulazeez-Jimoh-Resume.pdf` (EB Garamond, US Letter, one page) using Playwright/Chromium, and the "Download résumé" button links to it. In `npm run dev` the PDF doesn't exist, so the button only works on a built site (`npm run build && npm run preview`). If Chromium is missing locally, run `npx playwright install chromium`.
+
+Left out on purpose: phone number and GPA. Add them to `resume.md` if you want them on the public page and in the PDF.
+
 ## Deploy
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. One-time setup: repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.

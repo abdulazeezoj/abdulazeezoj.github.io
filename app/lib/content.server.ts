@@ -39,6 +39,15 @@ const postSchema = z.object({
   draft: z.boolean().default(false),
 });
 
+const resumeSchema = z.object({
+  name: z.string(),
+  headline: z.string(),
+  location: z.string(),
+  email: z.string(),
+  linkedin: z.string(),
+  github: z.string(),
+});
+
 export type ProjectMeta = z.infer<typeof projectSchema> & { slug: string };
 export type PostMeta = z.infer<typeof postSchema> & {
   slug: string;
@@ -55,6 +64,14 @@ const postFiles = import.meta.glob("../../content/blog/*.md", {
   import: "default",
   eager: true,
 }) as Record<string, string>;
+
+const resumeFile = Object.values(
+  import.meta.glob("../../content/resume.md", {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  }) as Record<string, string>,
+)[0];
 
 const slugOf = (path: string) => path.split("/").pop()!.replace(/\.md$/, "");
 
@@ -102,11 +119,43 @@ export function getPosts(): PostMeta[] {
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
+type HastNode = {
+  type: string;
+  tagName?: string;
+  value?: string;
+  properties?: Record<string, unknown>;
+  children?: HastNode[];
+};
+
+const text = (n: HastNode): string =>
+  n.value ?? (n.children ?? []).map(text).join("");
+
+/** In resume.md, a "### Left ::: Right" heading becomes a title with a right-aligned date. */
+function rehypeSplitHeadings() {
+  return (tree: HastNode) => {
+    const walk = (n: HastNode) => {
+      if (n.tagName === "h3") {
+        const full = text(n);
+        if (full.includes(" ::: ")) {
+          const [left, right] = full.split(" ::: ");
+          n.children = [
+            { type: "element", tagName: "span", properties: {}, children: [{ type: "text", value: left }] },
+            { type: "element", tagName: "span", properties: { className: ["when"] }, children: [{ type: "text", value: right }] },
+          ];
+        }
+      }
+      n.children?.forEach(walk);
+    };
+    walk(tree);
+  };
+}
+
 async function render(markdown: string) {
   const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(rehypeSplitHeadings)
     .use(rehypeSlug)
     .use(rehypePrettyCode, {
       theme: { light: "github-light", dark: "github-dark" },
@@ -138,4 +187,10 @@ export async function getPost(slug: string) {
     },
     html: await render(body),
   };
+}
+
+export async function getResume() {
+  const path = "../../content/resume.md";
+  const { meta, body } = parse(path, resumeFile, resumeSchema);
+  return { meta, html: await render(body) };
 }

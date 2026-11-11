@@ -25,6 +25,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck
+      # the build prints the About page to a PDF, which needs Chromium
+      - run: npx playwright install --with-deps chromium
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

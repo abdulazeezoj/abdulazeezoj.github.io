@@ -23,7 +23,7 @@ const links = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="bg-background/80 sticky top-0 z-40 border-b backdrop-blur">
+    <header className="bg-background/80 print:hidden sticky top-0 z-40 border-b backdrop-blur">
       <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4">
         <Link to="/" className="font-semibold tracking-tight">
           {site.name}

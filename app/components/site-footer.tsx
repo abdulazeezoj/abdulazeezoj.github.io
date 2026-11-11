@@ -2,7 +2,7 @@ import { site } from "~/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t">
+    <footer className="mt-24 border-t print:hidden">
       <div className="text-muted-foreground mx-auto flex max-w-3xl flex-col gap-3 px-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {site.name}

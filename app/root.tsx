@@ -52,12 +52,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <a
           href="#main"
-          className="bg-background focus:ring-ring sr-only z-50 rounded-md px-3 py-2 focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:ring-2"
+          className="bg-background focus:ring-ring sr-only z-50 print:hidden rounded-md px-3 py-2 focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:ring-2"
         >
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main" className="mx-auto max-w-3xl px-4 pt-12 sm:pt-16">
+        <main id="main" className="mx-auto max-w-3xl px-4 pt-12 sm:pt-16 print:max-w-none print:px-0 print:pt-0">
           {children}
         </main>
         <SiteFooter />
