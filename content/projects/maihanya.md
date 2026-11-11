@@ -6,7 +6,7 @@ kind: public
 tags: [AI, Simulation, Full-stack]
 stack: [Python, SUMO, PyTorch, FastAPI, Next.js, shadcn/ui, uv]
 role: Author (final-year project)
-featured: true
+featured: false
 repo: https://github.com/abdulazeezoj/maihanya
 ---
 

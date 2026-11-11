@@ -6,7 +6,7 @@ kind: public
 tags: [Full-stack, Education, TypeScript]
 stack: [Next.js, React, Prisma, Better Auth, BullMQ, Tailwind CSS, shadcn/ui]
 role: Author
-featured: true
+featured: false
 repo: https://github.com/abdulazeezoj/abu-slims
 ---
 

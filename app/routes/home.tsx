@@ -31,12 +31,13 @@ export default function Home({ loaderData }: Route.ComponentProps) {
           id="intro"
           className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
         >
-          I build AI products, from model to deployment.
+          I take AI products from idea to deployment.
         </h1>
         <p className="text-muted-foreground mt-5 max-w-xl text-lg leading-relaxed text-pretty">
-          Full-stack AI engineer working across backend APIs, retrieval and
-          ML pipelines, React interfaces and cloud infrastructure. This is where
-          I keep what I've built and what I've learned along the way.
+          I'm a full-stack AI engineer. I shape the idea, build the models and
+          retrieval, the backend and the interface, then deploy and run it on
+          the cloud. This is where I keep what I've shipped and what I've
+          learned along the way.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild>

@@ -6,7 +6,7 @@ kind: public
 tags: [AI, Computer vision, Cloud]
 stack: [Python, YOLOv5, AWS Lambda, ECR, SAM, GitHub Actions, Streamlit]
 role: Contributor (Omdena challenge)
-featured: true
+featured: false
 repo: https://github.com/abdulazeezoj/gridscope
 ---
 

@@ -6,7 +6,7 @@ kind: public
 tags: [CLI, Python, Developer tools]
 stack: [Python, uv, FastAPI, Flask, Jinja2, HTMX]
 role: Author
-featured: true
+featured: false
 repo: https://github.com/abdulazeezoj/brupy
 demo: https://abdulazeezoj.github.io/brupy/
 ---

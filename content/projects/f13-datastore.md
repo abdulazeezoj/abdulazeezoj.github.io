@@ -6,7 +6,7 @@ kind: case-study
 tags: [AI, RAG, Backend, Security]
 stack: [FastAPI, OpenSearch, RabbitMQ, Celery, RustFS, Keycloak]
 role: Full-stack AI engineer (contract, Vectuan.ai)
-featured: false
+featured: true
 ---
 
 F13 Datastore is the document layer behind enterprise RAG pipelines, built for Vectuan.ai. A company points it at its documents, and applications and AI agents can then search and retrieve the right ones, only the ones each user is allowed to see. It is private, client work, so this page covers the design rather than linking to code.

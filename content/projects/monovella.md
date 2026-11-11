@@ -6,7 +6,7 @@ kind: case-study
 tags: [Health, Full-stack, Mobile]
 stack: [Python, FastAPI, React Router, Expo, PostgreSQL, Redis, Docker]
 role: Product and engineering
-featured: true
+featured: false
 ---
 
 Monovella is an early-stage health product, still in active development. This page is a case study because the code is private.
