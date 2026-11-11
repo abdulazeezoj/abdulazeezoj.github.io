@@ -5,7 +5,7 @@ year: 2025
 kind: case-study
 tags: [AI, RAG, Cloud]
 stack: [Python, FastAPI, React, TypeScript, PostgreSQL, AWS Bedrock, ECS, Terraform]
-role: Full-stack AI engineer
+role: Full-stack AI engineer (contract)
 featured: true
 ---
 
@@ -19,7 +19,7 @@ Consultants spent a large share of their time searching internal material and re
 
 - **Chat with retrieval.** Claude models served through AWS Bedrock, grounded with Bedrock Knowledge Bases so answers come from the firm's documents rather than the model's memory.
 - **Agentic orchestration.** A ReAct-style loop in the API decides when to search, read or draft, with streaming responses (Server-Sent Events) so answers appear as they are written.
-- **Access control.** Fine-grained role-based permissions across documents and features, plus guardrails around regulated content.
+- **Access control and guardrails.** Fine-grained role-based permissions across documents and features, input and output guardrails around regulated content, and RAG evaluation workflows with production monitoring.
 - **Document handling.** Multi-format uploads stored in S3 and indexed for search.
 - **Outlook add-in.** The assistant is also available inside Microsoft Outlook, where the consultants already work.
 - **Infrastructure.** Terraform-managed AWS: containers on ECS behind a load balancer, PostgreSQL on RDS with Alembic migrations, separate dev, pre-production and production environments.

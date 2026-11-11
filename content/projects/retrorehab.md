@@ -1,16 +1,16 @@
 ---
 title: "RetroRehab"
-summary: "Computer-vision rehabilitation games that track the body through an ordinary camera, with no wearable sensors."
+summary: "A browser-based rehabilitation platform that tracks body movement in real time through an ordinary camera, with no wearable sensors."
 kind: case-study
 tags: [AI, Computer vision, Health]
-stack: [Python, MediaPipe, AWS EC2, Application Load Balancer]
-role: Engineer
+stack: [MediaPipe, AWS EC2, Application Load Balancer]
+role: AI engineer (Omdena)
 featured: true
 spotlight: true
 demo: https://games.retrorehab.io
 ---
 
-RetroRehab turns rehabilitation exercises into games. Patients move, a camera watches, and the game responds. The code is private, so this page is a case study, but you can try the product at [games.retrorehab.io](https://games.retrorehab.io).
+RetroRehab is a browser-based rehabilitation platform built during my time at Omdena. Patients move, a camera watches, and the game responds. The code is private, so this page is a case study, but you can try the product at [games.retrorehab.io](https://games.retrorehab.io).
 
 ## The problem
 

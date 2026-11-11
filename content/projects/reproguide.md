@@ -5,7 +5,7 @@ year: 2024
 kind: case-study
 tags: [AI, RAG, Agriculture]
 stack: [Python, FastAPI, LangChain, Qdrant, React, Vite, PostgreSQL, Docker, GCP]
-role: Full-stack engineer
+role: AI engineer (Omdena)
 featured: true
 ---
 

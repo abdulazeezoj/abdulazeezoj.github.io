@@ -13,7 +13,7 @@ I joined Omdena collaborative challenges, where teams from around the world work
 
 ## From contributions to contracts
 
-Those projects were public work. People could read the code, run the demo and see how I thought. That open work led to paid contracts, and eventually to a full-time role building an AI assistant for a financial-services company.
+Those projects were public work. People could read the code, run the demo and see how I thought. That open work led to paid contract roles, including building an AI assistant for a financial-services company.
 
 ## What I'd pass on
 
