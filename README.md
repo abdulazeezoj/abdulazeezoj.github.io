@@ -45,7 +45,9 @@ Always quote `title` and `summary` if they contain a colon. A bad or missing fie
 
 The About page is `content/resume.md`. Contact details live in its frontmatter; the body is normal markdown. A heading written as `### Company | Place ::: Mar 2026 – Present` shows the dates right-aligned.
 
-`npm run build` also prints that page to `build/client/Abdulazeez-Jimoh-Resume.pdf` (EB Garamond, US Letter, one page) using Playwright/Chromium, and the "Download résumé" button links to it. In `npm run dev` the PDF doesn't exist, so the button only works on a built site (`npm run build && npm run preview`). If Chromium is missing locally, run `npx playwright install chromium`.
+`npm run build` also generates `build/client/Abdulazeez-Jimoh-Resume.pdf` from that same file with [pdfmake](https://pdfmake.github.io/docs/) (`scripts/make-pdf.mjs`): pure JavaScript, no browser needed, EB Garamond, US Letter, one page. The "Download résumé" button links to it. In `npm run dev` the PDF doesn't exist, so the button only works on a built site (`npm run build && npm run preview`).
+
+The PDF script supports paragraphs, bullet lists, `**bold**`, `*italic*`, links and the two heading levels used in `resume.md`; anything else fails the build with a clear message rather than being dropped. If you change the page's look, the PDF layout is in that script and is styled separately.
 
 Left out on purpose: phone number and GPA. Add them to `resume.md` if you want them on the public page and in the PDF.
 
