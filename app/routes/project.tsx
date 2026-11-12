@@ -1,5 +1,7 @@
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { data, Link } from "react-router";
+import { ProjectCta } from "~/components/project-cta";
+import { Screenshot } from "~/components/screenshot";
 import { Badge } from "~/components/ui/badge";
 import { GithubIcon } from "~/components/github-icon";
 import { Button } from "~/components/ui/button";
@@ -23,7 +25,7 @@ export const meta: Route.MetaFunction = ({ loaderData }) =>
     : [];
 
 export default function Project({ loaderData }: Route.ComponentProps) {
-  const { meta, html } = loaderData;
+  const { meta, html, next } = loaderData;
   return (
     <article>
       <Link
@@ -32,7 +34,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
       >
         <ArrowLeft className="size-4" /> All projects
       </Link>
-      <h1 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h1 className="font-display mt-6 text-4xl font-medium tracking-tight sm:text-5xl">
         {meta.title}
       </h1>
       <p className="text-muted-foreground mt-3 text-lg">{meta.summary}</p>
@@ -85,10 +87,14 @@ export default function Project({ loaderData }: Route.ComponentProps) {
         </div>
       )}
 
+      <Screenshot project={meta} className="mt-8 aspect-[16/9]" />
+
       <div
         className="prose prose-neutral dark:prose-invert mt-10 max-w-none"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+
+      <ProjectCta next={next} />
     </article>
   );
 }

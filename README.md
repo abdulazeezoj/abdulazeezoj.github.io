@@ -36,6 +36,17 @@ draft: false            # true hides it from the production build
 Write-up in markdown.
 ```
 
+## Add a screenshot to a project
+
+Featured projects show a "Screenshot coming soon" placeholder until they have an image. Put the file in `public/screenshots/` (about 1600px wide, PNG or WebP; crop or blur anything confidential) and add two lines to the project's frontmatter:
+
+```md
+image: /screenshots/retrorehab.png
+imageAlt: "RetroRehab's exercise screen tracking a patient's arm movement"
+```
+
+`imageAlt` describes the picture for people using screen readers and is required. The build fails if the image file is missing.
+
 ## Add a blog post
 
 Create `content/blog/<slug>.md` with `title`, `summary`, `date` (YYYY-MM-DD), `tags` and optional `draft: true`.

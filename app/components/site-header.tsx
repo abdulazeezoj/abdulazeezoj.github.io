@@ -11,7 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "~/components/ui/sheet";
-import { site } from "~/lib/site";
+import { contactHref, site } from "~/lib/site";
 import { cn } from "~/lib/utils";
 
 const links = [
@@ -25,7 +25,7 @@ export function SiteHeader() {
   return (
     <header className="bg-background/80 print:hidden sticky top-0 z-40 border-b backdrop-blur">
       <div className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4">
-        <Link to="/" className="font-semibold tracking-tight">
+        <Link to="/" className="font-display text-xl font-medium tracking-tight">
           {site.name}
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-1 sm:flex">
@@ -44,9 +44,15 @@ export function SiteHeader() {
             </NavLink>
           ))}
           <ThemeToggle />
+          <Button asChild size="sm" className="ml-2">
+            <a href={contactHref}>Get in touch</a>
+          </Button>
         </nav>
         <div className="flex items-center gap-1 sm:hidden">
           <ThemeToggle />
+          <Button asChild size="sm">
+            <a href={contactHref}>Contact</a>
+          </Button>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Open menu">

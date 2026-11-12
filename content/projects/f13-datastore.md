@@ -3,7 +3,7 @@ title: "F13 Datastore"
 summary: "A self-hostable, multi-tenant document-intelligence platform that feeds enterprise RAG pipelines, with strict tenant and document isolation."
 year: 2026
 kind: case-study
-tags: [AI, RAG, Backend, Security]
+tags: [AI, Security]
 stack: [FastAPI, OpenSearch, RabbitMQ, Celery, RustFS, Keycloak]
 role: Full-stack AI engineer (contract)
 featured: true
@@ -11,7 +11,7 @@ problem: "A company's documents sit in many different systems, and an AI assista
 solution: "A self-hostable, multi-tenant document platform with hybrid search and strict tenant and document-level access control."
 ---
 
-F13 Datastore is the document layer behind enterprise RAG pipelines, built for an enterprise AI software company. A company points it at its documents, and applications and AI agents can then search and retrieve the right ones, only the ones each user is allowed to see. It is private, client work, so this page covers the design rather than linking to code.
+F13 Datastore is the document layer behind enterprise RAG pipelines, built for an enterprise AI software company. A company points it at its documents, and applications and AI agents can then search and retrieve the right ones, only the ones each user is allowed to see.
 
 ## The problem
 

@@ -1,6 +1,3 @@
-import "@fontsource/eb-garamond/latin-400.css";
-import "@fontsource/eb-garamond/latin-400-italic.css";
-import "@fontsource/eb-garamond/latin-700.css";
 import { Download } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { getResume } from "~/lib/content.server";

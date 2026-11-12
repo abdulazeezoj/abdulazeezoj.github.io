@@ -11,7 +11,7 @@ solution: "A browser-based platform that tracks body movement in real time throu
 demo: https://games.retrorehab.io
 ---
 
-RetroRehab is a browser-based rehabilitation platform built during my time at Omdena. Patients move, a camera watches, and the game responds. The code is private, so this page is a case study, but you can try the product at [games.retrorehab.io](https://games.retrorehab.io).
+RetroRehab is a browser-based rehabilitation platform built during my time at Omdena. Patients move, a camera watches, and the game responds. You can try the product at [games.retrorehab.io](https://games.retrorehab.io).
 
 ## The problem
 

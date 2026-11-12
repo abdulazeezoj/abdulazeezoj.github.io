@@ -3,7 +3,7 @@ title: "MaHanya"
 summary: "Priority-aware traffic signal control, simulated on real junction data, where a model suggests and a rule layer decides."
 year: 2026
 kind: public
-tags: [AI, Simulation, Full-stack]
+tags: [AI, "Web & mobile"]
 stack: [Python, SUMO, PyTorch, FastAPI, Next.js, shadcn/ui, uv]
 role: Author (final-year project)
 featured: false

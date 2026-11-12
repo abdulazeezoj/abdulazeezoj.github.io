@@ -3,7 +3,7 @@ title: "SARKINkofa"
 summary: "A vehicle and number-plate recognition system built on YOLOv8 and OpenCV, installable as a command-line tool."
 year: 2023
 kind: public
-tags: [AI, Computer vision, CLI]
+tags: [AI, Computer vision]
 stack: [Python, YOLOv8, OpenCV, Poetry]
 role: Author
 featured: false

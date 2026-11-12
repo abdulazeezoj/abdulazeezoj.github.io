@@ -3,7 +3,7 @@ title: "brupy"
 summary: "A CLI that scaffolds FastAPI and Flask projects from a short wizard, including database, migrations and a background worker."
 year: 2026
 kind: public
-tags: [CLI, Python, Developer tools]
+tags: [Developer tools]
 stack: [Python, uv, FastAPI, Flask, Jinja2, HTMX]
 role: Author
 featured: false

@@ -3,7 +3,7 @@ title: "ReproGuide"
 summary: "A conversational assistant that answers pig farmers' reproduction questions from US Pork Center of Excellence manuals, with page-level references."
 year: 2024
 kind: case-study
-tags: [AI, RAG, Agriculture]
+tags: [AI, "Web & mobile"]
 stack: [Python, FastAPI, LangChain, Qdrant, React, Vite, PostgreSQL, Docker, GCP]
 role: AI engineer (Omdena)
 featured: true
