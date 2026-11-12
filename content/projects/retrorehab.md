@@ -6,7 +6,8 @@ tags: [AI, Computer vision, Health]
 stack: [MediaPipe, AWS EC2, Application Load Balancer]
 role: AI engineer (Omdena)
 featured: true
-spotlight: true
+problem: "Tracking rehabilitation movement meant wearable sensors."
+solution: "A browser-based platform that tracks body movement in real time through an ordinary camera."
 demo: https://games.retrorehab.io
 ---
 

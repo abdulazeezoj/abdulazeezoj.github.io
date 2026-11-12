@@ -7,6 +7,8 @@ tags: [AI, RAG, Agriculture]
 stack: [Python, FastAPI, LangChain, Qdrant, React, Vite, PostgreSQL, Docker, GCP]
 role: AI engineer (Omdena)
 featured: true
+problem: "Pig farmers needed answers that were buried in more than 500 pages of manuals."
+solution: "A chat assistant that answers from the manuals and shows where each answer comes from."
 ---
 
 ReproGuide (built under the name FarrPro) is a chatbot for pig farmers. It lets them ask questions in plain language and get answers with pointers to the exact place in the source documentation.

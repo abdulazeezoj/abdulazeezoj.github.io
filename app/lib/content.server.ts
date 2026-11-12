@@ -20,8 +20,9 @@ const projectSchema = z.object({
   stack: z.array(z.string()).default([]),
   role: z.string().optional(),
   featured: z.boolean().default(false),
-  /** shown as the large "Featured project" card on the home page; use on one project */
-  spotlight: z.boolean().default(false),
+  /** shown on the home page under "Problems I've solved" (featured projects only) */
+  problem: z.string().optional(),
+  solution: z.string().optional(),
   repo: z.url().optional(),
   demo: z.url().optional(),
   draft: z.boolean().default(false),
