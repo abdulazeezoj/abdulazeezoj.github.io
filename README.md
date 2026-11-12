@@ -45,6 +45,13 @@ image: /screenshots/retrorehab.png
 imageAlt: "RetroRehab's exercise screen tracking a patient's arm movement"
 ```
 
+Projects with no screenshot to show have two alternatives:
+
+- `diagram: f13-isolation` (or `sancopilot-flow`) shows a hand-drawn SVG diagram instead. Diagrams live in `app/components/diagrams.tsx`, follow light and dark mode, and have a small version for the home page and a full one with a caption on the case study.
+- `placeholder: false` hides the "Screenshot coming soon" box.
+
+An `image` wins over a `diagram`, which wins over the placeholder.
+
 `imageAlt` describes the picture for people using screen readers and is required. The build fails if the image file is missing.
 
 ## Add a blog post

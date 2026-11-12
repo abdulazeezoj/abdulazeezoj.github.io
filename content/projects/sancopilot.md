@@ -7,6 +7,7 @@ tags: [AI]
 stack: [Python, FastAPI, React, TypeScript, PostgreSQL, AWS Bedrock, ECS, Terraform]
 role: Full-stack AI engineer (contract)
 featured: true
+diagram: sancopilot-flow
 problem: "A financial-services firm needed its consultants to get answers from internal documents and draft content."
 solution: "A copilot used by 800+ consultants, with guardrails, evaluation and monitoring, and an Outlook integration."
 ---

@@ -7,6 +7,7 @@ tags: [AI, Security]
 stack: [FastAPI, OpenSearch, RabbitMQ, Celery, RustFS, Keycloak]
 role: Full-stack AI engineer (contract)
 featured: true
+diagram: f13-isolation
 problem: "A company's documents sit in many different systems, and an AI assistant must only ever find and return what each person is allowed to see."
 solution: "A self-hostable, multi-tenant document platform with hybrid search and strict tenant and document-level access control."
 ---

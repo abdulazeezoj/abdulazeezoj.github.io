@@ -1,6 +1,7 @@
 // Build-time only: reads the markdown in /content, validates frontmatter and
 // renders markdown to HTML. Imported by route loaders, which run during prerender.
 import { existsSync } from "node:fs";
+import { diagramNames } from "~/components/diagrams";
 import fm from "front-matter";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -24,6 +25,10 @@ const projectSchema = z.object({
   /** screenshot in /public, e.g. "/screenshots/retrorehab.png"; featured projects show a placeholder until set */
   image: z.string().startsWith("/").optional(),
   imageAlt: z.string().optional(),
+  /** a hand-drawn diagram (see components/diagrams.tsx) shown instead of a screenshot */
+  diagram: z.enum(diagramNames).optional(),
+  /** set false to hide the "Screenshot coming soon" box on a featured project */
+  placeholder: z.boolean().default(true),
   /** shown on the home page under "Problems I've solved" (featured projects only) */
   problem: z.string().optional(),
   solution: z.string().optional(),

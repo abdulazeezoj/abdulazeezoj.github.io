@@ -1,9 +1,21 @@
 import { ImageIcon } from "lucide-react";
+import { Diagram } from "~/components/diagrams";
 import type { ProjectMeta } from "~/lib/content.server";
 import { cn } from "~/lib/utils";
 
-/** Shows the project's screenshot, or a placeholder for featured projects until one is added. */
-export function Screenshot({ project, className }: { project: ProjectMeta; className?: string }) {
+/**
+ * The visual for a project: its screenshot, else its diagram, else (for featured
+ * projects) a placeholder. `full` is the case-study page, `compact` the home card.
+ */
+export function Screenshot({
+  project,
+  className,
+  variant = "compact",
+}: {
+  project: ProjectMeta;
+  className?: string;
+  variant?: "compact" | "full";
+}) {
   if (project.image) {
     return (
       <img
@@ -14,7 +26,15 @@ export function Screenshot({ project, className }: { project: ProjectMeta; class
       />
     );
   }
-  if (!project.featured) return null;
+  if (project.diagram) {
+    if (variant === "full") return <Diagram name={project.diagram} variant="full" />;
+    return (
+      <div className={cn("bg-muted/30 flex items-center justify-center rounded-lg border p-3", className)}>
+        <Diagram name={project.diagram} variant="compact" />
+      </div>
+    );
+  }
+  if (!project.featured || !project.placeholder) return null;
   return (
     <div
       role="img"
