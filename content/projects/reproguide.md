@@ -8,7 +8,7 @@ stack: [Python, FastAPI, LangChain, Qdrant, React, Vite, PostgreSQL, Docker, GCP
 role: AI engineer (Omdena)
 featured: true
 image: /screenshots/reproguide.webp
-imageAlt: "The ReproGuide chat screen: a list of past chats on the left, and an answer about the causes of abortion in pigs with numbered source documents listed under it"
+imageAlt: "The ReproGuide chat screen: past chats on the left, and in the main panel an answer with numbered source documents listed under it, followed by a new question about the causes of abortion in pigs"
 problem: "Pig farmers needed answers that were buried in more than 500 pages of manuals."
 solution: "A chat assistant that answers from the manuals and shows where each answer comes from."
 ---
