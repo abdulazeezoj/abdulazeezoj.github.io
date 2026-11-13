@@ -22,7 +22,11 @@ export function Screenshot({
         src={project.image}
         alt={project.imageAlt ?? ""}
         loading="lazy"
-        className={cn("bg-muted w-full rounded-lg border object-cover object-top", className)}
+        className={cn(
+          "bg-muted w-full rounded-lg border",
+          variant === "compact" && "object-cover object-top",
+          className,
+        )}
       />
     );
   }
@@ -41,6 +45,7 @@ export function Screenshot({
       aria-label={`Screenshot of ${project.title} coming soon`}
       className={cn(
         "bg-muted/50 text-muted-foreground flex w-full flex-col items-center justify-center gap-2 rounded-lg border border-dashed text-sm",
+        variant === "full" && "aspect-[16/9]",
         className,
       )}
     >

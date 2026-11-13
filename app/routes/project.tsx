@@ -87,7 +87,7 @@ export default function Project({ loaderData }: Route.ComponentProps) {
         </div>
       )}
 
-      <Screenshot project={meta} variant="full" className="mt-8 aspect-[16/9]" />
+      <Screenshot project={meta} variant="full" className="mt-8" />
 
       <div
         className="prose prose-neutral dark:prose-invert mt-10 max-w-none"
