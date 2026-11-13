@@ -2,6 +2,7 @@ import { ExternalLink } from "lucide-react";
 import { Link } from "react-router";
 import { Screenshot } from "~/components/screenshot";
 import type { ProjectMeta } from "~/lib/content.server";
+import { cn } from "~/lib/utils";
 
 export function ProblemCard({ project }: { project: ProjectMeta }) {
   return (
@@ -36,7 +37,13 @@ export function ProblemCard({ project }: { project: ProjectMeta }) {
             )}
           </div>
         </div>
-        <Screenshot project={project} className="order-first aspect-[4/3] sm:order-last sm:col-span-2" />
+        <Screenshot
+          project={project}
+          className={cn(
+            "order-first sm:order-last sm:col-span-2",
+            project.image ? "aspect-video" : "aspect-[4/3]",
+          )}
+        />
       </div>
     </li>
   );
