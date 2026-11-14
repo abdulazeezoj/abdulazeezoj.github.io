@@ -3,7 +3,7 @@ title: "Applied R workshop"
 summary: "A seven-day curriculum, workbooks and scripts teaching statistics lecturers reproducible analysis in R."
 year: 2026
 kind: public
-tags: [Teaching, R, Data]
+tags: [Education]
 stack: [R, Quarto, LaTeX]
 role: Author
 featured: false

@@ -3,13 +3,16 @@ title: "SanCopilot"
 summary: "An enterprise AI copilot for financial-services consultants, built on AWS Bedrock with retrieval, role-based access and compliance guardrails."
 year: 2025
 kind: case-study
-tags: [AI, RAG, Cloud]
+tags: [AI]
 stack: [Python, FastAPI, React, TypeScript, PostgreSQL, AWS Bedrock, ECS, Terraform]
 role: Full-stack AI engineer (contract)
 featured: true
+diagram: sancopilot-flow
+problem: "A financial-services firm needed its consultants to get answers from internal documents and draft content."
+solution: "A copilot used by 800+ consultants, with guardrails, evaluation and monitoring, and an Outlook integration."
 ---
 
-SanCopilot is an AI assistant for consultants at a financial-services company. It answers questions against the firm's own documents and helps draft client-facing content. It is private, client work, so this page describes the problem and the engineering rather than linking to code.
+SanCopilot is an AI assistant for consultants at a financial-services company. It answers questions against the firm's own documents and helps draft client-facing content.
 
 ## The problem
 

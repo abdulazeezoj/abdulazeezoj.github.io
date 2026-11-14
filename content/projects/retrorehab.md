@@ -6,11 +6,14 @@ tags: [AI, Computer vision, Health]
 stack: [MediaPipe, AWS EC2, Application Load Balancer]
 role: AI engineer (Omdena)
 featured: true
-spotlight: true
+image: /screenshots/retrorehab.webp
+imageAlt: "RetroRehab's Kangaroo game: the player's webcam image with a kangaroo that follows their movement, a star to collect, and a timer and star score at the top"
+problem: "Tracking rehabilitation movement meant wearable sensors."
+solution: "A browser-based platform that tracks body movement in real time through an ordinary camera."
 demo: https://games.retrorehab.io
 ---
 
-RetroRehab is a browser-based rehabilitation platform built during my time at Omdena. Patients move, a camera watches, and the game responds. The code is private, so this page is a case study, but you can try the product at [games.retrorehab.io](https://games.retrorehab.io).
+RetroRehab is a browser-based rehabilitation platform built during my time at Omdena. Patients move, a camera watches, and the game responds. You can try the product at [games.retrorehab.io](https://games.retrorehab.io).
 
 ## The problem
 

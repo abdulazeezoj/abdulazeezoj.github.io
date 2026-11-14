@@ -1,20 +1,15 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Link } from "react-router";
 import { PostCard } from "~/components/post-card";
-import { FeaturedProject } from "~/components/featured-project";
-import { ProjectCard } from "~/components/project-card";
-import { GithubIcon } from "~/components/github-icon";
+import { ProblemCard } from "~/components/problem-card";
 import { Button } from "~/components/ui/button";
 import { getPosts, getProjects } from "~/lib/content.server";
-import { site } from "~/lib/site";
+import { contactHref, site } from "~/lib/site";
 import type { Route } from "./+types/home";
 
 export function loader() {
   return {
-    spotlight: getProjects().find((p) => p.spotlight) ?? null,
-    projects: getProjects()
-      .filter((p) => p.featured && !p.spotlight)
-      .slice(0, 5),
+    solved: getProjects().filter((p) => p.featured && p.problem && p.solution),
     posts: getPosts().slice(0, 3),
   };
 }
@@ -22,67 +17,62 @@ export function loader() {
 export const meta: Route.MetaFunction = () => [{ title: site.title }];
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  const { spotlight, projects, posts } = loaderData;
+  const { solved, posts } = loaderData;
   return (
     <>
       <section aria-labelledby="intro">
-        <p className="text-brand text-sm font-medium">Hi, I'm {site.name}</p>
         <h1
           id="intro"
-          className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
+          className="font-display text-5xl font-medium tracking-tight text-balance sm:text-6xl"
         >
-          I build AI products, from model to deployment.
+          Got a problem to solve, or an idea to build?
         </h1>
-        <p className="text-muted-foreground mt-5 max-w-xl text-lg leading-relaxed text-pretty">
-          Full-stack AI engineer working across backend APIs, retrieval and
-          ML pipelines, React interfaces and cloud infrastructure. This is where
-          I keep what I've built and what I've learned along the way.
+        <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-relaxed text-pretty">
+          Whether you're a business with something that needs fixing or a
+          startup with an idea that needs building, I design, build and launch
+          the software, using AI where it genuinely helps. From the first
+          conversation to live in production.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild>
-            <Link to="/projects">
-              See my work <ArrowRight />
-            </Link>
+            <a href={contactHref}>
+              <Mail /> Tell me about your project
+            </a>
           </Button>
           <Button asChild variant="outline">
-            <a href={site.github}>
-              <GithubIcon /> GitHub
-            </a>
-          </Button>
-          <Button asChild variant="ghost">
-            <a href={`mailto:${site.email}`}>
-              <Mail /> Get in touch
-            </a>
+            <Link to="/projects">See what I've built</Link>
           </Button>
         </div>
+        <p className="text-muted-foreground mt-4 flex items-center gap-2 text-sm">
+          <span className="size-2 rounded-full bg-emerald-500" aria-hidden="true" />
+          Available for remote contract work
+        </p>
       </section>
 
-      {spotlight && <FeaturedProject project={spotlight} />}
-
-      <section className="mt-20" aria-labelledby="featured">
+      <section className="mt-24" aria-labelledby="solved">
         <div className="flex items-baseline justify-between">
-          <h2 id="featured" className="text-xl font-semibold tracking-tight">
-            Selected projects
+          <h2 id="solved" className="font-display text-3xl font-medium tracking-tight">
+            Problems I've solved
           </h2>
           <Link to="/projects" className="text-muted-foreground hover:text-foreground text-sm">
-            All projects →
+            All projects
           </Link>
         </div>
-        <div className="divide-border mt-4 divide-y">
-          {projects.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
+        <ul className="divide-border mt-6 divide-y">
+          {solved.map((p) => (
+            <ProblemCard key={p.slug} project={p} />
           ))}
-        </div>
+        </ul>
       </section>
 
       {posts.length > 0 && (
-        <section className="mt-20" aria-labelledby="writing">
+        <section className="mt-24" aria-labelledby="writing">
           <div className="flex items-baseline justify-between">
-            <h2 id="writing" className="text-xl font-semibold tracking-tight">
+            <h2 id="writing" className="font-display text-3xl font-medium tracking-tight">
               Writing
             </h2>
             <Link to="/blog" className="text-muted-foreground hover:text-foreground text-sm">
-              All posts →
+              All posts
             </Link>
           </div>
           <div className="divide-border mt-4 divide-y">

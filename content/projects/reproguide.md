@@ -3,10 +3,14 @@ title: "ReproGuide"
 summary: "A conversational assistant that answers pig farmers' reproduction questions from US Pork Center of Excellence manuals, with page-level references."
 year: 2024
 kind: case-study
-tags: [AI, RAG, Agriculture]
+tags: [AI, "Web & mobile"]
 stack: [Python, FastAPI, LangChain, Qdrant, React, Vite, PostgreSQL, Docker, GCP]
 role: AI engineer (Omdena)
 featured: true
+image: /screenshots/reproguide.webp
+imageAlt: "The ReproGuide chat screen: past chats on the left, and in the main panel an answer with numbered source documents listed under it, followed by a new question about the causes of abortion in pigs"
+problem: "Pig farmers needed answers that were buried in more than 500 pages of manuals."
+solution: "A chat assistant that answers from the manuals and shows where each answer comes from."
 ---
 
 ReproGuide (built under the name FarrPro) is a chatbot for pig farmers. It lets them ask questions in plain language and get answers with pointers to the exact place in the source documentation.

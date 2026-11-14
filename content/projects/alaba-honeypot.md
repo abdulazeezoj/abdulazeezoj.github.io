@@ -3,7 +3,7 @@ title: "Honeypot"
 summary: "An SSH and web honeypot that records attackers' attempts, enriches source IPs with geolocation, and charts it all on a live dashboard."
 year: 2026
 kind: public
-tags: [Security, Python]
+tags: [Security]
 stack: [Python, Paramiko, Flask, SQLite, httpx, Chart.js, uv]
 role: Author
 featured: false

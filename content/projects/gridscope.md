@@ -3,10 +3,10 @@ title: "GridScope (SurplusMap)"
 summary: "Finds pylons, substations and power stations in satellite imagery with YOLOv5 and serves detections through a serverless API."
 year: 2022
 kind: public
-tags: [AI, Computer vision, Cloud]
+tags: [AI, Computer vision]
 stack: [Python, YOLOv5, AWS Lambda, ECR, SAM, GitHub Actions, Streamlit]
 role: Contributor (Omdena challenge)
-featured: true
+featured: false
 repo: https://github.com/abdulazeezoj/gridscope
 ---
 

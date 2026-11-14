@@ -3,13 +3,13 @@ title: "Monovella"
 summary: "A connected-care platform that follows a patient from specialist consultation to a fulfilled prescription or completed lab test in one traceable journey."
 year: 2026
 kind: case-study
-tags: [Health, Full-stack, Mobile]
+tags: [Health, "Web & mobile"]
 stack: [Python, FastAPI, React Router, Expo, PostgreSQL, Redis, Docker]
 role: Product and engineering
-featured: true
+featured: false
 ---
 
-Monovella is an early-stage health product, still in active development. This page is a case study because the code is private.
+Monovella is an early-stage health product, still in active development.
 
 ## The idea
 

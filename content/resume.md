@@ -47,6 +47,6 @@ Full-Stack AI Engineer with 5+ years of experience building AI-powered applicati
 
 ## Education
 
-### Ahmadu Bello University, Zaria, Nigeria ::: Sep 2022 – Sep 2026
+### Ahmadu Bello University, Zaria, Nigeria ::: Sep 2022 – Oct 2026
 
-*B.Sc. Computer Science (Expected)*
+*B.Sc. Computer Science (certificate and transcript pending)*

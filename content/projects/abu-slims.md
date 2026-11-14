@@ -3,10 +3,10 @@ title: "SLIMS"
 summary: "A web platform that replaces handwritten SIWES internship logbooks with a verifiable digital workflow at Ahmadu Bello University."
 year: 2026
 kind: public
-tags: [Full-stack, Education, TypeScript]
+tags: ["Web & mobile", Education]
 stack: [Next.js, React, Prisma, Better Auth, BullMQ, Tailwind CSS, shadcn/ui]
 role: Author
-featured: true
+featured: false
 repo: https://github.com/abdulazeezoj/abu-slims
 ---
 

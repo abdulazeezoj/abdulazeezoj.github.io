@@ -33,7 +33,7 @@ export default function Post({ loaderData }: Route.ComponentProps) {
       >
         <ArrowLeft className="size-4" /> All posts
       </Link>
-      <h1 className="mt-6 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+      <h1 className="font-display mt-6 text-4xl font-medium tracking-tight text-balance sm:text-5xl">
         {meta.title}
       </h1>
       <div className="text-muted-foreground mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">

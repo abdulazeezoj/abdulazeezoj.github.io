@@ -3,13 +3,13 @@ title: "Hydraprime CLI"
 summary: "A local trading lab: store candles, backtest strategy and risk combinations, and carefully validate demo and live execution."
 year: 2026
 kind: case-study
-tags: [CLI, Fintech, TypeScript]
+tags: [Developer tools]
 stack: [TypeScript, Node.js, Prisma, Vitest]
 role: Author
 featured: false
 ---
 
-Hydraprime is a command-line tool for experimenting with trading strategies on your own machine. It is development tooling, not investment advice or an unattended trading platform, and the code is private.
+Hydraprime is a command-line tool for experimenting with trading strategies on your own machine. It is development tooling, not investment advice or an unattended trading platform.
 
 ## What it does
 

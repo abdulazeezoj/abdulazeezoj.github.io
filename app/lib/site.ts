@@ -9,3 +9,5 @@ export const site = {
   github: "https://github.com/abdulazeezoj",
   linkedin: "https://linkedin.com/in/abdulazeez-oj",
 } as const;
+
+export const contactHref = `mailto:${site.email}?subject=${encodeURIComponent("Project enquiry")}`;

@@ -14,7 +14,7 @@ export const meta: Route.MetaFunction = () => [
 export default function Blog({ loaderData }: Route.ComponentProps) {
   return (
     <>
-      <h1 className="text-3xl font-semibold tracking-tight">Blog</h1>
+      <h1 className="font-display text-4xl font-medium tracking-tight">Blog</h1>
       <p className="text-muted-foreground mt-3 max-w-xl">
         Notes on building software, and what I learn along the way.{" "}
         <a className="text-brand underline underline-offset-4" href="/rss.xml">
